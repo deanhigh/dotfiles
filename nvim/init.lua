@@ -6,10 +6,7 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
-
--- Make line numbers default
+-- For more options, you can see `:help option-list`
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.mouse = "a"
@@ -50,16 +47,7 @@ require("lazy").setup({
 
 vim.lsp.enable({'luals','gopls', 'scala'})
 
--- vim.api.nvim_create_autocmd('LspAttach', {
---   callback = function(ev)
---     local client = vim.lsp.get_client_by_id(ev.data.client_id)
---
---     if client:supports_method('textDocument/completion') then
---       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
---     end
---   end,
--- })
-
+-- show diagnostics on current_line and flag diagnostic lines.
 vim.diagnostic.config({
   virtual_text = { current_line = true }
 })
