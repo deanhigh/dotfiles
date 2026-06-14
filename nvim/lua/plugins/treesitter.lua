@@ -1,0 +1,35 @@
+return {
+  -- Syntax highlighting via Treesitter
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSUpdate", "TSInstall", "TSInstallInfo" },
+    main = "nvim-treesitter.configs",
+    opts = {
+      ensure_installed = {
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+        "typescript",
+        "tsx",
+        "javascript",
+        "html",
+        "css",
+        "json",
+        "yaml",
+        "lua",
+        "vim",
+        "vimdoc",
+        "bash",
+        "markdown",
+        "markdown_inline",
+      },
+      auto_install = true,
+      highlight = { enable = true },
+      indent = { enable = true },
+    },
+  },
+}
