@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "claude",
+          "style": "diamond",
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "foreground": "#FFFFFF",
+          "background": "#FF6B35",
+          "template": " 󰯉 {{ .Model.DisplayName }} 󰂓 {{ .TokenGauge }}{{ if .FiveHourUsage }} 󱎫 5h {{ .FiveHourUsage }}% {{ .FiveHourGauge }}{{ if .FiveHourResetsIn }} (resets {{ .FiveHourResetsIn }}){{ end }}{{ end }}{{ if .SevenDayUsage }} 󰸗 7d {{ .SevenDayUsage }}% {{ .SevenDayGauge }}{{ if .SevenDayResetsIn }} (resets {{ .SevenDayResetsIn }}){{ end }}{{ end }} "
+        }
+      ]
+    }
+  ]
+}
